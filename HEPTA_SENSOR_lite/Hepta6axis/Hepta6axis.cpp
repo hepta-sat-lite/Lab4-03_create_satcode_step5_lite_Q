@@ -40,7 +40,7 @@ void Hepta6axis::sen_acc(float *ax,float *ay,float *az)
     n_axis.write(addr_accel_gyro,adata,1);
     n_axis.read(addr_accel_gyro|0x01,xl,1);
     double  acc_ax = short((xh[0]<<8) | (xl[0]));
-    *ax = (acc_ax)*4/32764*9.81;
+    *ax = (acc_ax)*2/32764*9.81;
 
 //y-axis
     adata[0] = 0x3D;
@@ -50,7 +50,7 @@ void Hepta6axis::sen_acc(float *ax,float *ay,float *az)
     n_axis.write(addr_accel_gyro,adata,1);
     n_axis.read(addr_accel_gyro|0x01,yl,1);
     double  acc_ay = short((yh[0]<<8) | (yl[0]));
-    *ay = (acc_ay)*4/32764*9.81;
+    *ay = (acc_ay)*2/32764*9.81;
 
 //z-axis
     adata[0] = 0x3F;
@@ -60,7 +60,7 @@ void Hepta6axis::sen_acc(float *ax,float *ay,float *az)
     n_axis.write(addr_accel_gyro,adata,1);
     n_axis.read(addr_accel_gyro|0x01,zl,1);
     double  acc_az = short((zh[0]<<8) | (zl[0]));
-    *az = (acc_az)*4/32764*9.81;
+    *az = (acc_az)*2/32764*9.81;
 }
 
 void Hepta6axis::sen_gyro(float *gx,float *gy,float *gz)
