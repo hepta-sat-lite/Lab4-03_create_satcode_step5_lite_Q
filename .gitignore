@@ -4,3 +4,11 @@ compile_commands.json
 .clangd
 .cache
 mbed
+HEPTA_CDH_lite/SDFileSystem/FATFileSystem
+HEPTA_CDH_lite/SDFileSystem
+HEPTA_CDH_lite
+HEPTA_EPS_lite/HeptaBattery
+HEPTA_EPS_lite
+HEPTA_SENSOR_lite/Hepta6axis
+HEPTA_SENSOR_lite/HeptaTemp
+HEPTA_SENSOR_lite
